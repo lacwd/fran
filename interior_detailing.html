@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Fran</title>
+  </head>
+  <body>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+
+    <header id="cs-navigation">
+      <div class="cs-container">
+        <!--Nav Logo-->
+        <a href="index.html" class="cs-logo" aria-label="back to home">
+          <img
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/mechanic-logo.svg"
+            alt="logo"
+            width="197"
+            height="43"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1" aria-hidden="true"></span>
+              <span class="cs-line cs-line2" aria-hidden="true"></span>
+              <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+              <li class="cs-li">
+                <a href="index.html" class="cs-li-link"> Home </a>
+              </li>
+              <li class="cs-li">
+                <a href="about.html" class="cs-li-link"> About </a>
+              </li>
+              <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+              <li class="cs-li cs-dropdown" tabindex="0">
+                <span class="cs-li-link cs-active">
+                  Services
+                  <img
+                    class="cs-drop-icon"
+                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-red.svg"
+                    alt="dropdown icon"
+                    width="15"
+                    height="15"
+                    decoding="async"
+                    aria-hidden="true"
+                  />
+                </span>
+                <ul class="cs-drop-ul">
+                  <li class="cs-drop-li">
+                    <a
+                      href="interior_detailing.html"
+                      class="cs-li-link cs-drop-link cs-active"
+                      >Interior Detailing</a
+                    >
+                  </li>
+                  <li class="cs-drop-li">
+                    <a
+                      href="exterior_detailing.html"
+                      class="cs-li-link cs-drop-link"
+                      >Exterior Detailing</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="cs-li">
+                <a href="contact.html" class="cs-li-link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <a href="tel:+15551234567" class="cs-button-solid cs-nav-button"
+          >📞 661-555-5555</a
+        >
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+      </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-843">
+      <div class="cs-container">
+        <span class="cs-int-title">Interior Detailing</span>
+      </div>
+      <!--Background Image-->
+      <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="
+            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga-m.jpg
+          "
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="
+            https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga.jpg
+          "
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga.jpg"
+          alt="yoga"
+          width="1280"
+          height="568"
+        />
+      </picture>
+      <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+      <svg
+        class="cs-wave"
+        width="1920"
+        height="179"
+        viewBox="0 0 1920 179"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                Side By Side                  -->
+    <!-- ============================================ -->
+
+    <section id="RPsbs-464">
+      <div class="cs-container">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg
+            "
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+            alt="leaf"
+            width="522"
+            height="551"
+          />
+        </picture>
+        <div class="cs-content">
+          <span class="cs-topper">Interior Detailing</span>
+          <h2 class="cs-title">HOW WE DETAIL THE INSIDE OF YOUR CAR</h2>
+          <p class="cs-text">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Amet minim
+            mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+            officia consequat duis enim velit mollit. Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Commodi, nam!
+          </p>
+          <a href="about.html" class="cs-button-solid"
+            >Learn More About Fran Detailing</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Side By Side Reverse              -->
+    <!-- ============================================ -->
+
+    <section id="RPsbsr-464">
+      <div class="cs-container">
+        <picture class="cs-picture">
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg
+            "
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg
+            "
+          />
+          <img
+            aria-hidden="true"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/landscaping1.jpg"
+            alt="leaf"
+            width="522"
+            height="551"
+          />
+        </picture>
+        <div class="cs-content">
+          <span class="cs-topper">Interior Detailing</span>
+          <h2 class="cs-title">HOW LONG IS THE PROCESS?</h2>
+          <p class="cs-text">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Amet minim
+            mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit
+            officia consequat duis enim velit mollit. Lorem ipsum dolor sit,
+            amet consectetur adipisicing elit. Commodi, nam!
+          </p>
+          <a href="about.html" class="cs-button-solid"
+            >Learn More About Fran Detailing</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-378">
+      <div class="cs-container">
+        <div class="cs-content">
+          <span class="cs-topper">Our Portfolio</span>
+          <h2 class="cs-title">Some Work from Our Memorable Gallery</h2>
+          <p class="cs-text">
+            At Stitch Cleaning Service, let us help you solve problems so that
+            you can focus on your mission. We support businesses through periods
+            of expansion, succession.
+          </p>
+        </div>
+        <div class="cs-gallery">
+          <!--Picture 1-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 2-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 3-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 4-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 5-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 6-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 7-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery7.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery7.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery7.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+          <!--Picture 8-->
+          <picture class="cs-image">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery8.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery8.jpg
+              "
+            />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery8.jpg"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!--                  Why Choose                  -->
+    <!-- ============================================ -->
+
+    <section id="why-choose-359">
+      <div class="cs-container">
+        <!--Left Section-->
+        <div class="cs-content">
+          <span class="cs-topper">Who We Are</span>
+          <h2 class="cs-title">Expert Cleaning Service You Can Trust</h2>
+          <p class="cs-text">
+            At Stitch Cleaning Service, let us help you solve problems so that
+            you can focus on your mission. We support businesses through
+            periods.
+          </p>
+          <!--Image of cleaners-->
+          <picture class="cs-picture">
+            <source
+              media="(max-width: 600px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners-m.jpg
+              "
+            />
+            <source
+              media="(min-width: 601px)"
+              srcset="
+                https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners.jpg
+              "
+            />
+            <img
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/cleaners.jpg"
+              alt="cleaners"
+              width="275"
+              height="132"
+            />
+          </picture>
+        </div>
+        <!--Cards-->
+        <ul class="cs-card-group">
+          <li class="cs-item">
+            <div class="cs-icon-wrapper">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/person-blue.svg"
+                alt="icon"
+                width="48"
+                height="48"
+              />
+              <!--Create a span to make more bubbles with pesudo elements-->
+              <span class="cs-bubble" aria-hidden="true"></span>
+            </div>
+            <div class="cs-flex">
+              <h3 class="cs-h3">Expert Employee</h3>
+              <p class="cs-item-text">
+                We’ve helped thousands of organizations to transform their
+                company to become relevant of helped thousands.
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <div class="cs-icon-wrapper">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/hand-blue.svg"
+                alt="icon"
+                width="48"
+                height="48"
+              />
+              <!--Create a span to make more bubbles with pesudo elements-->
+              <span class="cs-bubble" aria-hidden="true"></span>
+            </div>
+            <div class="cs-flex">
+              <h3 class="cs-h3">Affordable Package</h3>
+              <p class="cs-item-text">
+                We’ve helped thousands of organizations to transform their
+                company to become relevant of helped thousands.
+              </p>
+            </div>
+          </li>
+          <li class="cs-item">
+            <div class="cs-icon-wrapper">
+              <img
+                class="cs-icon"
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/stars-thumbs.svg"
+                alt="icon"
+                width="48"
+                height="48"
+              />
+              <!--Create a span to make more bubbles with pesudo elements-->
+              <span class="cs-bubble" aria-hidden="true"></span>
+            </div>
+            <div class="cs-flex">
+              <h3 class="cs-h3">100% Satisfaction</h3>
+              <p class="cs-item-text">
+                We’ve helped thousands of organizations to transform their
+                company to become relevant of helped thousands.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!--                     CTA                      -->
+    <!-- ============================================ -->
+
+    <section id="cta-1693">
+      <div class="cs-container">
+        <div class="cs-content">
+          <h2 class="cs-title">
+            Have Doubts? Get Your Queries Solved by Our Experts
+          </h2>
+          <a href="contact.html" class="cs-button-solid"
+            >Get In Touch With Fran</a
+          >
+        </div>
+      </div>
+      <div class="cs-wrapper">
+        <img
+          class="cs-graphic cs-graphic-1"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png"
+          alt="logo"
+          height="372"
+          width="372"
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          class="cs-graphic cs-graphic-2"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-logo.png"
+          alt="logo"
+          height="372"
+          width="372"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </section>
+    <!-- ============================================ -->
+    <!--                  Footer                      -->
+    <!-- ============================================ -->
+
+    <footer id="footer-1154">
+      <div class="cs-container">
+        <div class="cs-top">
+          <a aria-label="go back to home" class="cs-logo" href="index.html">
+            <img
+              class="cs-logo-img"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Logos/stitch-charity.svg"
+              alt="logo"
+              width="168"
+              height="48"
+            />
+          </a>
+          <ul class="cs-ul">
+            <li class="cs-li">
+              <a href="index.html" class="cs-link">Home</a>
+            </li>
+            <li class="cs-li">
+              <a href="about.html" class="cs-link">About</a>
+            </li>
+            <li class="cs-li">
+              <a href="interior_detailing.html" class="cs-link"
+                >Interior Detailing</a
+              >
+            </li>
+            <li class="cs-li">
+              <a href="exterior_detailing.html" class="cs-link"
+                >Exterior Detailing</a
+              >
+            </li>
+            <li class="cs-li">
+              <a href="contact.html" class="cs-link">Contact</a>
+            </li>
+
+            <li class="cs-li">
+              <a href="tel:+11234567890" class="cs-link">📞 661-555-5555</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cs-bottom">
+          <span class="cs-copyright">
+            © Copyright 2023 -
+            <a href="index.html" class="cs-copyright-link"
+              >Stitch Non-profit Charity</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
