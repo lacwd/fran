@@ -96,7 +96,7 @@ body {
     padding: var(--sectionPadding);
     /* 160px - 200px */
     padding-top: clamp(10rem, 20vw, 12.5rem);
-    background-color: #1a1a1a;
+    background-color: #0b2e51;
     overflow: hidden;
     position: relative;
     z-index: 1;
